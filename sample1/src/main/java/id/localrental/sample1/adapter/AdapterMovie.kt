@@ -14,10 +14,16 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 
 import id.localrental.sample1.R
+import id.localrental.sample1.base.ItemClickListener
 import id.localrental.sample1.model.Movie
 import id.localrental.sample1.ui.activity.DetailActivity
+import kotlinx.android.synthetic.main.item_movie.view.*
 
-private class AdapterMovie(private val context: Context, private val movieList: List<Movie>) :
+class AdapterMovie(
+    private val context: Context,
+    private val movieList: List<Movie>,
+    private val listener: ItemClickListener
+) :
     RecyclerView.Adapter<AdapterMovie.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -26,18 +32,21 @@ private class AdapterMovie(private val context: Context, private val movieList: 
     }
 
     override fun onBindViewHolder(holder: ViewHolder, @SuppressLint("RecyclerView") position: Int) {
+        setupView(holder, position)
+        holder.itemView.setOnClickListener {
+            listener.onClick(position)
+        }
+    }
+
+    private fun setupView(
+        holder: ViewHolder,
+        position: Int) {
         holder.tvName.text = movieList[position].title
         holder.tvDesc.text = movieList[position].overview
         holder.tvDate.text = movieList[position].releaseDate
         Glide.with(context)
             .load("http://image.tmdb.org/t/p/w185" + movieList[position].posterPath)
             .into(holder.ivMovie)
-
-        holder.itemView.setOnClickListener {
-            val intent = Intent(context, DetailActivity::class.java)
-            intent.putExtra("movie", movieList[position])
-            context.startActivity(intent)
-        }
     }
 
     override fun getItemCount(): Int {
@@ -45,11 +54,10 @@ private class AdapterMovie(private val context: Context, private val movieList: 
     }
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val tvName: TextView = itemView.findViewById(R.id.tvName)
-        val tvDesc: TextView = itemView.findViewById(R.id.tvDesc)
-        val tvDate: TextView = itemView.findViewById(R.id.tvDate)
-        val ivMovie: ImageView = itemView.findViewById(R.id.ivMovie)
-
+        val tvName: TextView = itemView.tvName
+        val tvDesc: TextView = itemView.tvDesc
+        val tvDate: TextView = itemView.tvDate
+        val ivMovie: ImageView = itemView.ivMovie
     }
 
 }

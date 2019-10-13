@@ -7,10 +7,11 @@ import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
 
 import id.localrental.sample1.R
+import id.localrental.sample1.base.ScopedActivity
 import id.localrental.sample1.model.Movie
 import kotlinx.android.synthetic.main.activity_detail.*
 
-class DetailActivity : AppCompatActivity() {
+class DetailActivity : ScopedActivity() {
 
     private var movie: Movie? = null
 
@@ -23,7 +24,7 @@ class DetailActivity : AppCompatActivity() {
     }
 
     private fun getDataIntent() {
-        movie = intent.getParcelableExtra("movie")
+        movie = intent.getParcelableExtra("data")
     }
 
     private fun setupTitleToolbar() {
@@ -37,6 +38,5 @@ class DetailActivity : AppCompatActivity() {
         Glide.with(this)
             .load("http://image.tmdb.org/t/p/w500" + movie?.posterPath)
             .into(ivMovie)
-
     }
 }

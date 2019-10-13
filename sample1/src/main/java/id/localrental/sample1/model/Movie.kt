@@ -37,10 +37,7 @@ data class Movie(
 	@field:SerializedName("popularity")
 	val popularity: Double? = null,
 
-	@field:SerializedName("vote_average")
-	val voteAverage: Int? = null,
-
-	@PrimaryKey
+	@PrimaryKey (autoGenerate = true)
 	@field:SerializedName("id")
 	val id: Int? = null,
 

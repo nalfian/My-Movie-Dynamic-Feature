@@ -11,10 +11,9 @@ import id.localrental.sample1.model.Movie
 interface MovieDao {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    fun upsert(movie: List<Movie>)
+    fun upsert(movies: List<Movie>)
 
-    @Query("select * from movie sort")
-    fun getMovie(): LiveData<List<Movie>>
-
+    @Query("select * from movie")
+    fun getMovie(): List<Movie>
 
 }

@@ -1,5 +1,6 @@
 package id.localrental.sample1.base
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
@@ -22,5 +23,10 @@ abstract class ScopedActivity: AppCompatActivity(), CoroutineScope {
     override fun onDestroy() {
         super.onDestroy()
         job.cancel()
+    }
+
+    override fun getSupportParentActivityIntent(): Intent? {
+        onBackPressed()
+        return null
     }
 }
