@@ -1,4 +1,4 @@
-package id.localrental.sample3.data.network
+package id.localrental.sample3.data.network.service
 
 import id.localrental.sample3.data.network.response.ResponseMovie
 import id.localrental.sample3.BuildConfig
