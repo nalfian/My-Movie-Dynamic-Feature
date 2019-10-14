@@ -1,11 +1,11 @@
-package id.localrental.sample1.presenter
+package id.localrental.sample3.ui.feature1.list
 
 import android.content.Context
-import id.localrental.sample1.db.MovieDatabase
-import id.localrental.sample1.model.Movie
-import id.localrental.sample1.model.ResponseMovie
-import id.localrental.sample1.util.Notify
-import id.localrental.sample1.util.UtilsApi
+import id.localrental.sample3.data.db.MovieDatabase
+import id.localrental.sample3.data.db.entity.Movie
+import id.localrental.sample3.data.network.response.ResponseMovie
+import id.localrental.sample3.util.Notify
+import id.localrental.sample3.util.UtilsApi
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

@@ -1,16 +1,14 @@
-package id.localrental.sample1.ui.activity
+package id.localrental.sample3.ui.feature1.list
 
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
-import id.localrental.sample1.R
-import id.localrental.sample1.presenter.UpcomingPresenter
-import id.localrental.sample1.presenter.UpcomingView
-import id.localrental.sample1.util.Notify
-import id.localrental.sample1.adapter.AdapterMovie
-import id.localrental.sample1.base.ItemClickListener
-import id.localrental.sample1.model.Movie
+import id.localrental.sample3.R
+import id.localrental.sample3.base.ItemClickListener
+import id.localrental.sample3.data.db.entity.Movie
+import id.localrental.sample3.ui.feature1.detail.DetailActivity
+import id.localrental.sample3.util.Notify
 import kotlinx.android.synthetic.main.activity_main.*
 
 class UpcomingActivity : AppCompatActivity(), UpcomingView {

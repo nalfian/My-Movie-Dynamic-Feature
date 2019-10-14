@@ -1,10 +1,10 @@
-package id.localrental.sample1.db
+package id.localrental.sample3.data.db.query
 
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
-import id.localrental.sample1.model.Movie
+import id.localrental.sample3.data.db.entity.Movie
 
 @Dao
 interface MovieDao {

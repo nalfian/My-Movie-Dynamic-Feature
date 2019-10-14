@@ -1,4 +1,4 @@
-package id.localrental.sample1.adapter
+package id.localrental.sample3.ui.feature1.list
 
 import android.annotation.SuppressLint
 import android.content.Context
@@ -11,10 +11,10 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
 import com.bumptech.glide.Glide
+import id.localrental.sample3.R
+import id.localrental.sample3.base.ItemClickListener
+import id.localrental.sample3.data.db.entity.Movie
 
-import id.localrental.sample1.R
-import id.localrental.sample1.base.ItemClickListener
-import id.localrental.sample1.model.Movie
 import kotlinx.android.synthetic.main.item_movie.view.*
 
 class AdapterMovie(

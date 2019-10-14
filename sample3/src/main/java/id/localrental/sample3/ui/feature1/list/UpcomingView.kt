@@ -1,6 +1,6 @@
-package id.localrental.sample1.presenter
+package id.localrental.sample3.ui.feature1.list
 
-import id.localrental.sample1.model.Movie
+import id.localrental.sample3.data.db.entity.Movie
 
 
 interface UpcomingView {

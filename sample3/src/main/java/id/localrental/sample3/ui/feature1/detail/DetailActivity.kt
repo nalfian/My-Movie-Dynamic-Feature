@@ -1,12 +1,11 @@
-package id.localrental.sample1.ui.activity
+package id.localrental.sample3.ui.feature1.detail
 
 import android.os.Bundle
 
 import com.bumptech.glide.Glide
-
-import id.localrental.sample1.R
-import id.localrental.sample1.base.ScopedActivity
-import id.localrental.sample1.model.Movie
+import id.localrental.sample3.R
+import id.localrental.sample3.base.ScopedActivity
+import id.localrental.sample3.data.db.entity.Movie
 import kotlinx.android.synthetic.main.activity_detail.*
 
 class DetailActivity : ScopedActivity() {
