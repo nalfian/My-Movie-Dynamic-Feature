@@ -1,4 +1,4 @@
-package id.localrental.samplestructure
+package id.localrental.sample4
 
 import org.junit.Test
 

@@ -1,2 +1,2 @@
-include ':sample4', ':sample1', ':sample2', ':sample3'
+include ':sample4', ':sample1', ':sample2', ':sample3', ':movie_feature'
 rootProject.name='SampleStructure'

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:dist="http://schemas.android.com/apk/distribution"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="id.localrental.movie_feature">
+
+    <dist:module
+        dist:instant="false"
+        dist:title="@string/title_dynamic_feature">
+        <dist:delivery>
+            <dist:on-demand />
+        </dist:delivery>
+        <dist:fusing dist:include="true" />
+    </dist:module>
+
+    <application tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".list.UpcomingActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".detail.DetailActivity"
+            android:configChanges="locale|keyboardHidden|orientation|screenSize"
+            android:parentActivityName=".list.UpcomingActivity" />
+    </application>
+
+</manifest>
