@@ -1,4 +1,4 @@
-# My-Movie-to-Vote-Structure-Package
+# My-Movie-Dynamic-Feature
 
 Halo manteman disini untuk opsi structure project yang akan kita gunakan, pilih yang menurut kalian terbaik dan mudah untuk kalian
 
